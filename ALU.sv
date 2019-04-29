@@ -19,25 +19,20 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ALU(
-    input [7:0] a,
-    input [7:0] b,
-    input [3:0] ctrl,
+    input [3:0] a,
+    input [3:0] b,
+    input [0:0] ctrl,
     output zero,
-    output reg [31:0] result
+    output reg [3:0] result
     );
 	 
-	 always @ * begin
-		case (ctrl)
-			4'b0000: result = a & b;
-			4'b0001: result = a | b;
-			4'b0010: result = a + b;
-			4'b0110: result = a - b;
-			4'b0111: result = a < b;
-			4'b1100: result = ~a;
-			default: result = 0;
-		endcase
-	end
+    always @ * begin
+	case (ctrl)
+	  1'b0: result = a & b;
+	  1'b1: result = a | b;
+	endcase
+    end
 	
-		assign zero = (result == 0);
+    assign zero = (result == 0);
 
 endmodule

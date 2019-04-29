@@ -2,422 +2,48 @@
 
 (* src = "ALU.sv:21" *)
 module ALU(a, b, ctrl, zero, result);
-  (* src = "ALU.sv:33" *)
-  wire [31:0] _000_;
   (* src = "ALU.sv:31" *)
-  wire [31:0] _001_;
-  wire [1:0] _002_;
-  wire [1:0] _003_;
-  wire [1:0] _004_;
-  wire [1:0] _005_;
-  wire [1:0] _006_;
-  wire [2:0] _007_;
-  wire _008_;
-  wire [2:0] _009_;
-  wire _010_;
-  wire [2:0] _011_;
-  wire _012_;
-  wire [2:0] _013_;
-  wire _014_;
-  wire [2:0] _015_;
-  wire _016_;
-  wire [2:0] _017_;
-  wire _018_;
-  wire [2:0] _019_;
-  wire _020_;
-  wire [2:0] _021_;
-  wire _022_;
-  wire [2:0] _023_;
-  wire _024_;
-  wire [2:0] _025_;
-  wire _026_;
-  wire [2:0] _027_;
-  wire _028_;
-  wire [15:0] _029_;
-  wire [7:0] _030_;
-  wire [3:0] _031_;
-  wire [1:0] _032_;
-  wire _033_;
-  wire _034_;
-  wire [3:0] _035_;
-  wire [3:0] _036_;
-  wire _037_;
-  wire _038_;
-  wire _039_;
-  wire _040_;
-  wire _041_;
-  (* src = "ALU.sv:35" *)
-  wire [31:0] _042_;
-  (* src = "ALU.sv:36" *)
-  wire [31:0] _043_;
+  wire [3:0] _00_;
+  wire [1:0] _01_;
+  wire _02_;
   (* src = "ALU.sv:32" *)
-  wire [31:0] _044_;
+  wire [3:0] _03_;
   (* src = "ALU.sv:30|<techmap.v>:432" *)
-  wire [191:0] _045_;
-  (* src = "ALU.sv:30|<techmap.v>:428" *)
-  wire [31:0] _046_;
-  wire _047_;
-  wire _048_;
-  wire _049_;
-  wire _050_;
-  wire _051_;
-  (* src = "ALU.sv:34" *)
-  wire [31:0] _052_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:203" *)
-  wire [31:0] _053_;
-  wire [31:0] _054_;
-  (* src = "ALU.sv:35|<techmap.v>:258" *)
-  wire [7:0] _055_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:203" *)
-  wire [7:0] _056_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:203" *)
-  wire [7:0] _057_;
-  wire [7:0] _058_;
-  (* src = "ALU.sv:30|<techmap.v>:445" *)
-  wire _059_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _060_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _061_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _062_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _063_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _064_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _065_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _066_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)
-  wire _067_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)
-  wire _068_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)
-  wire _069_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)
-  wire _070_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)
-  wire _071_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)
-  wire _072_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)
-  wire _073_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)
-  wire _074_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _075_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _076_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _077_;
-  (* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)
-  wire _078_;
-  (* src = "ALU.sv:35|<techmap.v>:260" *)
-  wire [7:0] _079_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _080_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _081_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _082_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _083_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _084_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _085_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _086_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:222" *)
-  wire _087_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:222" *)
-  wire _088_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:222" *)
-  wire _089_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:222" *)
-  wire _090_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:229" *)
-  wire _091_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:229" *)
-  wire _092_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:229" *)
-  wire _093_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:229" *)
-  wire _094_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _095_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _096_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _097_;
-  (* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)
-  wire _098_;
+  wire [7:0] _04_;
+  wire _05_;
   (* src = "ALU.sv:22" *)
-  input [7:0] a;
+  input [3:0] a;
   (* src = "ALU.sv:23" *)
-  input [7:0] b;
+  input [3:0] b;
   (* src = "ALU.sv:24" *)
-  input [3:0] ctrl;
+  input ctrl;
   (* src = "ALU.sv:26" *)
-  output [31:0] result;
+  output [3:0] result;
   (* src = "ALU.sv:25" *)
   output zero;
-  assign _002_[1] = _035_[2] |(* src = "ALU.sv:30" *)  _035_[3];
-  assign _037_ = _002_[0] |(* src = "ALU.sv:30" *)  _002_[1];
-  assign _003_[0] = _036_[0] |(* src = "ALU.sv:30" *)  _036_[1];
-  assign _038_ = _003_[0] |(* src = "ALU.sv:30" *)  _003_[1];
-  assign _003_[1] = _035_[2] |(* src = "ALU.sv:30" *)  ctrl[3];
-  assign _039_ = _004_[0] |(* src = "ALU.sv:30" *)  _003_[1];
-  assign _004_[0] = ctrl[0] |(* src = "ALU.sv:30" *)  _036_[1];
-  assign _040_ = _004_[0] |(* src = "ALU.sv:30" *)  _005_[1];
-  assign _006_[0] = _036_[0] |(* src = "ALU.sv:30" *)  ctrl[1];
-  assign _041_ = _006_[0] |(* src = "ALU.sv:30" *)  _005_[1];
-  assign _008_ = _007_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _007_[1];
-  assign _009_[1] = _007_[1] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[104];
-  assign _010_ = _007_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _009_[1];
-  assign _011_[1] = _045_[71] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[103];
-  assign _011_[2] = _045_[135] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[167];
-  assign _012_ = _011_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _011_[1];
-  assign _046_[7] = _012_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _011_[2];
-  assign _013_[1] = _045_[70] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[102];
-  assign _013_[2] = _045_[134] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[166];
-  assign _014_ = _013_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _013_[1];
-  assign _046_[6] = _014_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _013_[2];
-  assign _015_[1] = _045_[69] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[101];
-  assign _015_[2] = _045_[133] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[165];
-  assign _016_ = _015_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _015_[1];
-  assign _046_[5] = _016_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _015_[2];
-  assign _017_[1] = _045_[68] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[100];
-  assign _017_[2] = _045_[132] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[164];
-  assign _018_ = _017_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _017_[1];
-  assign _046_[4] = _018_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _017_[2];
-  assign _019_[1] = _045_[67] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[99];
-  assign _019_[2] = _045_[131] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[163];
-  assign _020_ = _019_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _019_[1];
-  assign _046_[3] = _020_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _019_[2];
-  assign _021_[1] = _045_[66] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[98];
-  assign _021_[2] = _045_[130] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[162];
-  assign _022_ = _021_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _021_[1];
-  assign _046_[2] = _022_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _021_[2];
-  assign _023_[1] = _045_[65] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[97];
-  assign _023_[2] = _045_[129] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[161];
-  assign _024_ = _023_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _023_[1];
-  assign _046_[1] = _024_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _023_[2];
-  assign _025_[0] = _045_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[32];
-  assign _025_[1] = _045_[64] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[96];
-  assign _025_[2] = _045_[128] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _045_[160];
-  assign _026_ = _025_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _025_[1];
-  assign _046_[0] = _026_ |(* src = "ALU.sv:30|<techmap.v>:441" *)  _025_[2];
-  assign _027_[0] = _007_[0] |(* src = "ALU.sv:30|<techmap.v>:445" *)  _047_;
-  assign _027_[1] = _048_ |(* src = "ALU.sv:30|<techmap.v>:445" *)  _049_;
-  assign _027_[2] = _050_ |(* src = "ALU.sv:30|<techmap.v>:445" *)  _051_;
-  assign _028_ = _027_[0] |(* src = "ALU.sv:30|<techmap.v>:445" *)  _027_[1];
-  assign _059_ = _028_ |(* src = "ALU.sv:30|<techmap.v>:445" *)  _027_[2];
-  assign _029_[0] = result[0] |(* src = "ALU.sv:41" *)  result[1];
-  assign _029_[1] = result[2] |(* src = "ALU.sv:41" *)  result[3];
-  assign _029_[2] = result[4] |(* src = "ALU.sv:41" *)  result[5];
-  assign _029_[3] = result[6] |(* src = "ALU.sv:41" *)  result[7];
-  assign _029_[4] = result[8] |(* src = "ALU.sv:41" *)  result[31];
-  assign _030_[0] = _029_[0] |(* src = "ALU.sv:41" *)  _029_[1];
-  assign _030_[1] = _029_[2] |(* src = "ALU.sv:41" *)  _029_[3];
-  assign _030_[2] = _029_[4] |(* src = "ALU.sv:41" *)  result[31];
-  assign _031_[0] = _030_[0] |(* src = "ALU.sv:41" *)  _030_[1];
-  assign _031_[1] = _030_[2] |(* src = "ALU.sv:41" *)  result[31];
-  assign _032_[0] = _031_[0] |(* src = "ALU.sv:41" *)  _031_[1];
-  assign _033_ = _032_[0] |(* src = "ALU.sv:41" *)  result[31];
-  assign _002_[0] = ctrl[0] |(* src = "ALU.sv:30" *)  ctrl[1];
-  assign _005_[1] = ctrl[2] |(* src = "ALU.sv:30" *)  ctrl[3];
-  assign _034_ = _002_[0] |(* src = "ALU.sv:30" *)  _005_[1];
-  assign zero = ~(* src = "ALU.sv:41" *) _033_;
-  assign _007_[0] = ~(* src = "ALU.sv:30" *) _037_;
-  assign _047_ = ~(* src = "ALU.sv:30" *) _038_;
-  assign _048_ = ~(* src = "ALU.sv:30" *) _039_;
-  assign _049_ = ~(* src = "ALU.sv:30" *) _040_;
-  assign _050_ = ~(* src = "ALU.sv:30" *) _041_;
-  assign _051_ = ~(* src = "ALU.sv:30" *) _034_;
-  assign result[0] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[0] : 1'h0;
-  assign result[1] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[1] : 1'h0;
-  assign result[2] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[2] : 1'h0;
-  assign result[3] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[3] : 1'h0;
-  assign result[4] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[4] : 1'h0;
-  assign result[5] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[5] : 1'h0;
-  assign result[6] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[6] : 1'h0;
-  assign result[7] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _046_[7] : 1'h0;
-  assign result[8] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _010_ : 1'h0;
-  assign result[31] = _059_ ? (* src = "ALU.sv:30|<techmap.v>:445" *) _008_ : 1'h0;
-  assign _055_[0] = ~(* src = "ALU.sv:33|<techmap.v>:258" *) b[0];
-  assign _055_[1] = ~(* src = "ALU.sv:33|<techmap.v>:258" *) b[1];
-  assign _055_[3] = ~(* src = "ALU.sv:33|<techmap.v>:258" *) b[3];
-  assign _055_[6] = ~(* src = "ALU.sv:33|<techmap.v>:258" *) b[6];
-  assign _055_[7] = ~(* src = "ALU.sv:33|<techmap.v>:258" *) b[7];
-  assign _055_[2] = ~(* src = "ALU.sv:34|<techmap.v>:258" *) b[2];
-  assign _055_[4] = ~(* src = "ALU.sv:34|<techmap.v>:258" *) b[4];
-  assign _055_[5] = ~(* src = "ALU.sv:34|<techmap.v>:258" *) b[5];
-  assign _043_[0] = ~(* src = "ALU.sv:36" *) a[0];
-  assign _043_[1] = ~(* src = "ALU.sv:36" *) a[1];
-  assign _043_[2] = ~(* src = "ALU.sv:36" *) a[2];
-  assign _043_[3] = ~(* src = "ALU.sv:36" *) a[3];
-  assign _043_[4] = ~(* src = "ALU.sv:36" *) a[4];
-  assign _043_[5] = ~(* src = "ALU.sv:36" *) a[5];
-  assign _043_[6] = ~(* src = "ALU.sv:36" *) a[6];
-  assign _043_[7] = ~(* src = "ALU.sv:36" *) a[7];
-  assign _042_[0] = ~(* src = "ALU.sv:35" *) _056_[7];
-  assign _044_[6] = a[6] |(* src = "ALU.sv:32" *)  b[6];
-  assign _044_[7] = a[7] |(* src = "ALU.sv:32" *)  b[7];
-  assign _057_[0] = a[0] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[0];
-  assign _058_[1] = a[1] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[1];
-  assign _058_[2] = a[2] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[2];
-  assign _058_[3] = a[3] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[3];
-  assign _058_[4] = a[4] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[4];
-  assign _058_[5] = a[5] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[5];
-  assign _058_[6] = a[6] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[6];
-  assign _058_[7] = a[7] ^(* src = "ALU.sv:34|<techmap.v>:262" *)  _055_[7];
-  assign _052_[1] = _058_[1] ^(* src = "ALU.sv:34|<techmap.v>:263" *)  _056_[0];
-  assign _052_[2] = _058_[2] ^(* src = "ALU.sv:34|<techmap.v>:263" *)  _056_[1];
-  assign _052_[3] = _058_[3] ^(* src = "ALU.sv:34|<techmap.v>:263" *)  _056_[2];
-  assign _052_[6] = _058_[6] ^(* src = "ALU.sv:34|<techmap.v>:263" *)  _056_[5];
-  assign _052_[7] = _058_[7] ^(* src = "ALU.sv:34|<techmap.v>:263" *)  _056_[6];
-  assign _052_[31] = 1'h1 ^(* src = "ALU.sv:34|<techmap.v>:263" *)  _056_[7];
-  assign _079_[0] = a[0] &(* src = "ALU.sv:34|<techmap.v>:260" *)  _055_[0];
-  assign _079_[1] = a[1] &(* src = "ALU.sv:34|<techmap.v>:260" *)  _055_[1];
-  assign _079_[2] = a[2] &(* src = "ALU.sv:34|<techmap.v>:260" *)  _055_[2];
-  assign _079_[3] = a[3] &(* src = "ALU.sv:34|<techmap.v>:260" *)  _055_[3];
-  assign _079_[6] = a[6] &(* src = "ALU.sv:34|<techmap.v>:260" *)  _055_[6];
-  assign _052_[0] = _057_[0] ^(* src = "ALU.sv:35|<techmap.v>:263" *)  1'h1;
-  assign _052_[4] = _058_[4] ^(* src = "ALU.sv:35|<techmap.v>:263" *)  _056_[3];
-  assign _052_[5] = _058_[5] ^(* src = "ALU.sv:35|<techmap.v>:263" *)  _056_[4];
-  assign _079_[4] = a[4] &(* src = "ALU.sv:35|<techmap.v>:260" *)  _055_[4];
-  assign _079_[5] = a[5] &(* src = "ALU.sv:35|<techmap.v>:260" *)  _055_[5];
-  assign _079_[7] = a[7] &(* src = "ALU.sv:35|<techmap.v>:260" *)  _055_[7];
-  assign _060_ = _054_[5] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _001_[4];
-  assign _061_ = _054_[7] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _001_[6];
-  assign _062_ = _070_ &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _053_[1];
-  assign _063_ = _068_ &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _075_;
-  assign _064_ = _069_ &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _053_[3];
-  assign _065_ = _054_[1] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _001_[0];
-  assign _066_ = _054_[3] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _001_[2];
-  assign _067_ = _054_[5] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)  _054_[4];
-  assign _068_ = _054_[7] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)  _054_[6];
-  assign _081_ = _058_[3] &(* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:221" *)  _079_[2];
-  assign _069_ = _068_ &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)  _067_;
-  assign _070_ = _054_[3] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:222" *)  _054_[2];
-  assign _071_ = _067_ &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _053_[3];
-  assign _072_ = _054_[2] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _053_[1];
-  assign _073_ = _054_[4] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _053_[3];
-  assign _074_ = _054_[6] &(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _053_[5];
-  assign _075_ = _001_[5] |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _060_;
-  assign _076_ = _001_[7] |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _061_;
-  assign _053_[3] = _078_ |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _062_;
-  assign _077_ = _076_ |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _063_;
-  assign _000_[8] = _077_ |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _064_;
-  assign _053_[1] = _001_[1] |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _065_;
-  assign _078_ = _001_[3] |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:221" *)  _066_;
-  assign _053_[5] = _075_ |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _071_;
-  assign _053_[2] = _001_[2] |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _072_;
-  assign _053_[4] = _001_[4] |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _073_;
-  assign _053_[6] = _001_[6] |(* src = "ALU.sv:33|<techmap.v>:260|<techmap.v>:229" *)  _074_;
-  assign _082_ = _058_[5] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _079_[4];
-  assign _083_ = _058_[7] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _079_[6];
-  assign _084_ = _087_ &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _056_[1];
-  assign _085_ = _089_ &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _096_;
-  assign _086_ = _090_ &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _056_[3];
-  assign _080_ = _058_[1] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _056_[0];
-  assign _088_ = _058_[5] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:222" *)  _058_[4];
-  assign _089_ = _058_[7] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:222" *)  _058_[6];
-  assign _090_ = _089_ &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:222" *)  _088_;
-  assign _087_ = _058_[3] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:222" *)  _058_[2];
-  assign _091_ = _088_ &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:229" *)  _056_[3];
-  assign _093_ = _058_[4] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:229" *)  _056_[3];
-  assign _094_ = _058_[6] &(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:229" *)  _056_[5];
-  assign _096_ = _079_[5] |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _082_;
-  assign _097_ = _079_[7] |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _083_;
-  assign _056_[3] = _095_ |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _084_;
-  assign _098_ = _097_ |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _085_;
-  assign _056_[7] = _098_ |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _086_;
-  assign _056_[1] = _079_[1] |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _080_;
-  assign _095_ = _079_[3] |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:221" *)  _081_;
-  assign _056_[5] = _096_ |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:229" *)  _091_;
-  assign _056_[2] = _079_[2] |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:229" *)  _092_;
-  assign _056_[4] = _079_[4] |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:229" *)  _093_;
-  assign _056_[6] = _079_[6] |(* src = "ALU.sv:34|<techmap.v>:260|<techmap.v>:229" *)  _094_;
-  assign _092_ = _058_[2] &(* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:229" *)  _056_[1];
-  assign _056_[0] = _079_[0] |(* src = "ALU.sv:35|<techmap.v>:260|<techmap.v>:212" *)  _057_[0];
-  assign _035_[3] = ctrl[3] ^(* src = "ALU.sv:30" *)  1'h1;
-  assign _035_[2] = ctrl[2] ^(* src = "ALU.sv:30" *)  1'h1;
-  assign _036_[1] = ctrl[1] ^(* src = "ALU.sv:30" *)  1'h1;
-  assign _036_[0] = ctrl[0] ^(* src = "ALU.sv:30" *)  1'h1;
-  assign _045_[160] = _001_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[161] = _001_[1] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[162] = _001_[2] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[163] = _001_[3] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[164] = _001_[4] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[165] = _001_[5] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[166] = _001_[6] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[167] = _001_[7] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _051_;
-  assign _045_[128] = _044_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[129] = _044_[1] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[130] = _044_[2] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[131] = _044_[3] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[132] = _044_[4] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[133] = _044_[5] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[134] = _044_[6] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[135] = _044_[7] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _050_;
-  assign _045_[96] = _000_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[97] = _000_[1] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[98] = _000_[2] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[99] = _000_[3] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[100] = _000_[4] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[101] = _000_[5] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[102] = _000_[6] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[103] = _000_[7] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[104] = _000_[8] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _049_;
-  assign _045_[64] = _052_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[65] = _052_[1] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[66] = _052_[2] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[67] = _052_[3] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[68] = _052_[4] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[69] = _052_[5] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[70] = _052_[6] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[71] = _052_[7] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _007_[1] = _052_[31] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _048_;
-  assign _045_[32] = _042_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _047_;
-  assign _045_[0] = _043_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _023_[0] = _043_[1] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _021_[0] = _043_[2] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _019_[0] = _043_[3] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _017_[0] = _043_[4] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _015_[0] = _043_[5] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _013_[0] = _043_[6] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _011_[0] = _043_[7] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _007_[0];
-  assign _000_[0] = a[0] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[0];
-  assign _054_[1] = a[1] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[1];
-  assign _054_[2] = a[2] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[2];
-  assign _054_[3] = a[3] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[3];
-  assign _054_[4] = a[4] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[4];
-  assign _054_[5] = a[5] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[5];
-  assign _054_[6] = a[6] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[6];
-  assign _054_[7] = a[7] ^(* src = "ALU.sv:33|<techmap.v>:262" *)  b[7];
-  assign _000_[1] = _054_[1] ^(* src = "ALU.sv:33|<techmap.v>:263" *)  _001_[0];
-  assign _000_[2] = _054_[2] ^(* src = "ALU.sv:33|<techmap.v>:263" *)  _053_[1];
-  assign _000_[3] = _054_[3] ^(* src = "ALU.sv:33|<techmap.v>:263" *)  _053_[2];
-  assign _000_[4] = _054_[4] ^(* src = "ALU.sv:33|<techmap.v>:263" *)  _053_[3];
-  assign _000_[5] = _054_[5] ^(* src = "ALU.sv:33|<techmap.v>:263" *)  _053_[4];
-  assign _000_[6] = _054_[6] ^(* src = "ALU.sv:33|<techmap.v>:263" *)  _053_[5];
-  assign _000_[7] = _054_[7] ^(* src = "ALU.sv:33|<techmap.v>:263" *)  _053_[6];
-  assign _001_[0] = a[0] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[0];
-  assign _001_[1] = a[1] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[1];
-  assign _001_[2] = a[2] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[2];
-  assign _001_[3] = a[3] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[3];
-  assign _001_[4] = a[4] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[4];
-  assign _001_[5] = a[5] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[5];
-  assign _001_[6] = a[6] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[6];
-  assign _001_[7] = a[7] &(* src = "ALU.sv:33|<techmap.v>:260" *)  b[7];
-  assign _044_[0] = a[0] |(* src = "ALU.sv:32" *)  b[0];
-  assign _044_[1] = a[1] |(* src = "ALU.sv:32" *)  b[1];
-  assign _044_[2] = a[2] |(* src = "ALU.sv:32" *)  b[2];
-  assign _044_[3] = a[3] |(* src = "ALU.sv:32" *)  b[3];
-  assign _044_[4] = a[4] |(* src = "ALU.sv:32" *)  b[4];
-  assign _044_[5] = a[5] |(* src = "ALU.sv:32" *)  b[5];
-  assign result[30:9] = { result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31], result[31] };
+  assign result[2] = _04_[2] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _04_[6];
+  assign result[3] = _04_[3] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _04_[7];
+  assign result[1] = _04_[1] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _04_[5];
+  assign result[0] = _04_[0] |(* src = "ALU.sv:30|<techmap.v>:441" *)  _04_[4];
+  assign _01_[0] = result[0] |(* src = "ALU.sv:36" *)  result[1];
+  assign _01_[1] = result[2] |(* src = "ALU.sv:36" *)  result[3];
+  assign _02_ = _01_[0] |(* src = "ALU.sv:36" *)  _01_[1];
+  assign zero = ~(* src = "ALU.sv:36" *) _02_;
+  assign _05_ = ~(* src = "ALU.sv:30" *) ctrl;
+  assign _00_[0] = a[0] &(* src = "ALU.sv:31" *)  b[0];
+  assign _00_[1] = a[1] &(* src = "ALU.sv:31" *)  b[1];
+  assign _00_[2] = a[2] &(* src = "ALU.sv:31" *)  b[2];
+  assign _00_[3] = a[3] &(* src = "ALU.sv:31" *)  b[3];
+  assign _03_[0] = a[0] |(* src = "ALU.sv:32" *)  b[0];
+  assign _03_[1] = a[1] |(* src = "ALU.sv:32" *)  b[1];
+  assign _03_[2] = a[2] |(* src = "ALU.sv:32" *)  b[2];
+  assign _03_[3] = a[3] |(* src = "ALU.sv:32" *)  b[3];
+  assign _04_[4] = _00_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _05_;
+  assign _04_[5] = _00_[1] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _05_;
+  assign _04_[6] = _00_[2] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _05_;
+  assign _04_[7] = _00_[3] &(* src = "ALU.sv:30|<techmap.v>:434" *)  _05_;
+  assign _04_[0] = _03_[0] &(* src = "ALU.sv:30|<techmap.v>:434" *)  ctrl;
+  assign _04_[1] = _03_[1] &(* src = "ALU.sv:30|<techmap.v>:434" *)  ctrl;
+  assign _04_[2] = _03_[2] &(* src = "ALU.sv:30|<techmap.v>:434" *)  ctrl;
+  assign _04_[3] = _03_[3] &(* src = "ALU.sv:30|<techmap.v>:434" *)  ctrl;
 endmodule
