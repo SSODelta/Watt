@@ -14,4 +14,4 @@ memory; opt
 techmap; opt
 
 # show output
-show -pause
+show -prefix show
