@@ -2,25 +2,26 @@ compile:
 	ghc *.hs
 
 clean:
-	rm *.hi
-	rm *.o
-	rm verilog
-	testfile.dot
+	rm -f *.hi
+	rm -f *.o
+	rm -f verilog
+	rm -f testfile_*.v
+	rm -f testfile_*.dot
 
-yosys_flatten:
-	yosys -p "hierarchy; proc; opt; fsm; opt; memory; opt; techmap; opt; write_verilog" -o testfile_flat.v testfile.v
+yosys_flatten $(INPUT) $(OUTPUT):
+	yosys -p "hierarchy; proc; opt; fsm; opt; memory; opt; techmap; opt; write_verilog" -o $(OUTPUT) $(INPUT)
 
-remove_comments:
-	cat testfile_flat.v | perl remove_coment.pl > perl_out_file.v
+remove_comments $(INPUT) $(OUTPUT):
+	cat $(INPUT) | perl remove_coment.pl > $(OUTPUT)
 
-yosys_out_flatten:
-	yosys -p "hierarchy; proc; opt; fsm; opt; memory; opt; techmap; opt; write_verilog" -o testfile_out_flat.v testfile_out.v
-
-run:
-	yosys_flatten
-	./verilog
-	yosys_out_flatten
-
+run: 
+	make compile 
+	make yosys_flatten INPUT=testfile.v OUTPUT=testfile_flat.v
+	make remove_comments INPUT=testfile_flat.v OUTPUT=testfile_flat_no_comments.v
+	./verilog testfile_flat_no_comments.v testfile_out.v
+	make yosys_flatten INPUT=testfile_out.v OUTPUT=testfile_out_flat.v
+	make remove_comments INPUT=testfile_out_flat.v OUTPUT=testfile_out_flat_no_comments.v
+	make image INPUT=testfile_out_flat_no_comments.v
 
 image:
-	yosys -p "prep; show -stretch -prefix testfile_flat.v -format dot" testfile_flat.v
+	yosys -p "prep; show -stretch -prefix $(INPUT) -format dot" $(INPUT)

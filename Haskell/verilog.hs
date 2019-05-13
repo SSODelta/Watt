@@ -4,6 +4,7 @@ import Language.Verilog.Parser.Tokens
 import Language.Verilog.AST
 import Data.BitVec
 import ReplaceVerilog
+import System.Environment
 
 print_tokens = putStrLn . show . alexScanTokens
 print_tokenStrings = putStrLn . (foldr (\a b -> a ++ " " ++ b) "") . (map tokenString) . alexScanTokens
@@ -46,4 +47,5 @@ replace_xor (a : r) = a : replace_xor r
 -- get_matrix :: [ModuleItem] -> [ModuleItem]
 -- get_matrix s = get_identifiers $ get_assign s
 
-main = fileParse "testfile_flat.v" "testfile_out.v"
+main = getArgs >>= \args -> fileParse (args!!0) (args!!1)
+  -- fileParse hd args[0] args[1]
