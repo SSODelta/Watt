@@ -1,8 +1,8 @@
 module mux_2to1(Y, A, B, sel);
-   output [15:0] Y;
-   input [15:0]  A, B;
+   output [1:0] Y;
+   input [1:0]  A, B;
    input 	 sel;
-   reg [15:0] 	 Y;
+   reg [1:0] 	 Y;
    always @(A or B or sel)
      if (sel == 1'b0)
        Y = A ^ B;
