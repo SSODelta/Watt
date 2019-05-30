@@ -47,17 +47,10 @@ modulize_expr (CONSTANT_NAND a b) n =
 modulize_expr (CONSTANT_DANGLE_NOT a) n =
   let (extra,e,n') = (modulize_expr a n) in
   let name = "dangle_" ++ show n'
-  in (extra ++ [Wire Nothing [("dangle_" ++ name,Nothing)],
+  in (extra ++ [Wire Nothing [("gate_" ++ name,Nothing)],
                 Wire Nothing [(name, Nothing)],
                 Assign (LHS ("gate_" ++ name)) (UniOp BWNot (Ident name)),
                 Assign (LHS name) e],(Ident name),n'+1)
-
--- name_from_expr :: Expr -> String
--- name_from_expr (Ident s) = s
--- name_from_expr (IdentBit s e) = s ++ drop 2 (show e)
--- name_from_expr (UniOp _ e) = "not_" ++ show (hash e)
--- name_from_expr (BinOp BWNAnd e1 e2) = "nand_" ++ (name_from_expr e1) ++ "_" ++ (name_from_expr e2)
--- name_from_expr (BinOp BWNOr e1 e2) = "nor_" ++ (name_from_expr e1) ++ "_" ++ (name_from_expr e2)
 
 optimize_body :: Integer -> [ModuleItem] -> [ModuleItem]
 optimize_body _ [] = []
