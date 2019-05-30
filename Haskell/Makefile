@@ -24,4 +24,4 @@ run:
 	./Main 1 testfile_out_flat_no_comments.v testfile_optimized.v
 
 image $(INPUT):
-	yosys -p "prep; show -stretch -prefix $(INPUT) -format dot" $(INPUT)
+	yosys -p "show -stretch -prefix $(INPUT) -format dot" $(INPUT)

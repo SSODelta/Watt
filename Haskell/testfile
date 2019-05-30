@@ -5,7 +5,7 @@ module mux_2to1(Y, A, B, sel);
    reg [15:0] 	 Y;
    always @(A or B or sel)
      if (sel == 1'b0)
-       Y = A ^ B;
+       Y = ~(A ~& B);
      else
        Y = A + B;
 endmodule

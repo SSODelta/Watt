@@ -9,30 +9,6 @@ module mux_2to1(Y, A, B, sel);
   
   wire _05_;
   
-  wire _06_;
-  
-  wire _07_;
-  
-  wire _08_;
-  
-  wire _09_;
-  
-  wire _10_;
-  
-  wire _11_;
-  
-  wire _12_;
-  
-  wire _13_;
-  
-  wire _14_;
-  
-  wire _15_;
-  
-  wire _16_;
-  
-  wire _17_;
-  
   input [1:0] A;
   
   input [1:0] B;
@@ -46,24 +22,12 @@ module mux_2to1(Y, A, B, sel);
   wire [1:0] _2_;
   
   input sel;
-  assign _17_ = ~ sel;
-  assign _11_ = ~ A[0];
-  assign _12_ = ~ B[0];
-  assign _13_ = ~ A[1];
-  assign _14_ = ~ B[1];
-  assign _15_ = ~ _2_[1];
-  assign _16_ = ~ _1_[0];
-  assign _09_ = sel &  _0_[1];
-  assign _10_ = _17_ &  _2_[1];
-  assign Y[1] = _09_ |  _10_;
-  assign _03_ = _11_ &  B[0];
-  assign _04_ = A[0] &  _12_;
-  assign Y[0] = _03_ |  _04_;
-  assign _05_ = _13_ &  B[1];
-  assign _06_ = A[1] &  _14_;
-  assign _2_[1] = _05_ |  _06_;
-  assign _07_ = _15_ &  _1_[0];
-  assign _08_ = _2_[1] &  _16_;
-  assign _0_[1] = _07_ |  _08_;
+  assign _05_ = ~ sel;
+  assign _03_ = sel &  _0_[1];
+  assign _04_ = _05_ &  _2_[1];
+  assign Y[1] = _03_ |  _04_;
+  assign Y[0] = A[0] ^  B[0];
+  assign _2_[1] = A[1] ^  B[1];
+  assign _0_[1] = _2_[1] ^  _1_[0];
   assign _1_[0] = A[0] &  B[0];
 endmodule

@@ -2,36 +2,12 @@
 
 (* src = "testfile_out.v:1" *)
 module mux_2to1(Y, A, B, sel);
-  (* src = "testfile_out.v:10" *)
+  (* src = "testfile_out.v:9" *)
   wire _03_;
-  (* src = "testfile_out.v:10" *)
+  (* src = "testfile_out.v:9" *)
   wire _04_;
-  (* src = "testfile_out.v:11" *)
+  (* src = "testfile_out.v:9" *)
   wire _05_;
-  (* src = "testfile_out.v:11" *)
-  wire _06_;
-  (* src = "testfile_out.v:12" *)
-  wire _07_;
-  (* src = "testfile_out.v:12" *)
-  wire _08_;
-  (* src = "testfile_out.v:9" *)
-  wire _09_;
-  (* src = "testfile_out.v:9" *)
-  wire _10_;
-  (* src = "testfile_out.v:10" *)
-  wire _11_;
-  (* src = "testfile_out.v:10" *)
-  wire _12_;
-  (* src = "testfile_out.v:11" *)
-  wire _13_;
-  (* src = "testfile_out.v:11" *)
-  wire _14_;
-  (* src = "testfile_out.v:12" *)
-  wire _15_;
-  (* src = "testfile_out.v:12" *)
-  wire _16_;
-  (* src = "testfile_out.v:9" *)
-  wire _17_;
   (* src = "testfile_out.v:5" *)
   input [1:0] A;
   (* src = "testfile_out.v:6" *)
@@ -46,24 +22,12 @@ module mux_2to1(Y, A, B, sel);
   wire [1:0] _2_;
   (* src = "testfile_out.v:8" *)
   input sel;
-  assign _17_ = ~(* src = "testfile_out.v:9" *) sel;
-  assign _11_ = ~(* src = "testfile_out.v:10" *) A[0];
-  assign _12_ = ~(* src = "testfile_out.v:10" *) B[0];
-  assign _13_ = ~(* src = "testfile_out.v:11" *) A[1];
-  assign _14_ = ~(* src = "testfile_out.v:11" *) B[1];
-  assign _15_ = ~(* src = "testfile_out.v:12" *) _2_[1];
-  assign _16_ = ~(* src = "testfile_out.v:12" *) _1_[0];
-  assign _09_ = sel &(* src = "testfile_out.v:9" *)  _0_[1];
-  assign _10_ = _17_ &(* src = "testfile_out.v:9" *)  _2_[1];
-  assign Y[1] = _09_ |(* src = "testfile_out.v:9" *)  _10_;
-  assign _03_ = _11_ &(* src = "testfile_out.v:10" *)  B[0];
-  assign _04_ = A[0] &(* src = "testfile_out.v:10" *)  _12_;
-  assign Y[0] = _03_ |(* src = "testfile_out.v:10" *)  _04_;
-  assign _05_ = _13_ &(* src = "testfile_out.v:11" *)  B[1];
-  assign _06_ = A[1] &(* src = "testfile_out.v:11" *)  _14_;
-  assign _2_[1] = _05_ |(* src = "testfile_out.v:11" *)  _06_;
-  assign _07_ = _15_ &(* src = "testfile_out.v:12" *)  _1_[0];
-  assign _08_ = _2_[1] &(* src = "testfile_out.v:12" *)  _16_;
-  assign _0_[1] = _07_ |(* src = "testfile_out.v:12" *)  _08_;
+  assign _05_ = ~(* src = "testfile_out.v:9" *) sel;
+  assign _03_ = sel &(* src = "testfile_out.v:9" *)  _0_[1];
+  assign _04_ = _05_ &(* src = "testfile_out.v:9" *)  _2_[1];
+  assign Y[1] = _03_ |(* src = "testfile_out.v:9" *)  _04_;
+  assign Y[0] = A[0] ^(* src = "testfile_out.v:10" *)  B[0];
+  assign _2_[1] = A[1] ^(* src = "testfile_out.v:11" *)  B[1];
+  assign _0_[1] = _2_[1] ^(* src = "testfile_out.v:12" *)  _1_[0];
   assign _1_[0] = A[0] &(* src = "testfile_out.v:13" *)  B[0];
 endmodule
