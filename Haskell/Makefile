@@ -23,5 +23,5 @@ run:
 	make remove_comments INPUT=testfile_out_flat.v OUTPUT=testfile_out_flat_no_comments.v
 	./Main 1 testfile_out_flat_no_comments.v testfile_optimized.v
 
-image:
+image $(INPUT):
 	yosys -p "prep; show -stretch -prefix $(INPUT) -format dot" $(INPUT)
